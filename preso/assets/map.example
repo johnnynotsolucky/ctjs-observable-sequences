@@ -1,0 +1,6 @@
+clicks$
+.map(ev => ({
+    x: ev.x,
+    y: ev.y
+  })
+)

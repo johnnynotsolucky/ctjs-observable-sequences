@@ -1,0 +1,8 @@
+  const left$ = viewportClick$
+    .filter(hemisphere(-1))
+    .mapTo(-1)
+  const right$ = viewportClick$
+    .filter(hemisphere(1))
+    .mapTo(1)
+
+  const direction$ = xs.merge(left$, right$)

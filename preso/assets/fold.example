@@ -1,0 +1,5 @@
+  const playerPosition$ = direction$
+    .fold((pos, side) =>
+      side < 0 ? moveLeft(pos, side) : moveRight(pos, side),
+      1 // Start in the centre lane
+    )

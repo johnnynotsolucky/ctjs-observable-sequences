@@ -1,0 +1,5 @@
+clicks$
+.map(toCoordinates)
+.filter(coords =>
+  coords.x > 100 || coords.y > 100
+)

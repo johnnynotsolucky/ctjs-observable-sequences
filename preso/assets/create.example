@@ -1,0 +1,11 @@
+const createResizeStream = () => {
+  const getDimentions = el => ({ width: el.innerWidth, height: el.innerHeight })
+
+  return xs.create({
+    start: listener =>
+      window.addEventListener('resize', ev =>
+        listener.next(getDimentions(ev.target)))
+  })
+}
+
+const viewport$ = createResizeStream()

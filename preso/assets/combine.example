@@ -1,0 +1,8 @@
+  xs.combine(click$, viewport$)
+    .map(([clickEvent, viewport]) => ({
+      x: clickEvent.x,
+      y: clickEvent.y,
+      width: viewport.width,
+      height: viewport.height
+    }))
+    .filter(hemisphere(-1))
